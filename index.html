@@ -49,135 +49,129 @@
 			</div>
 		</header>
 	</section>
-
-<!-- Section -->
-<section class="profile-section">
-	<div class="profile-section-in">		
-		<div class="profile-image-site">
-			<div class="profile-image-div">
-				<a href="#" id="profile-link">
-					<img id="Profile_images" src="images/friends/00.jpg">
-					<input type="file" id="Profile_images-input" accept="image/*" onchange="changeCoverImage('Profile_images-input','Profile_images')" hidden="true">	
+<!-- Profile header -->
+	<section class="profile-section">
+		<div class="profile-section-in">
+			<div class="profile-image-site">
+				<div class="profile-image-div">
+					<a href="#" id="profile-link">
+						<img id="Profile_images" src="images/friends/00.jpg">
+						<input type="file" id="Profile_images-input" accept="image/*" onchange="changeCoverImage('Profile_images-input','Profile_images')" hidden="true">	
+					</a>
+					<button id="edit-profile-pic-btn">
+						<span class="fas fa-camera"></span>
+					</button>
+				</div>
+			</div>
+			<div class="profile-name-info">
+				<h1>
+					<span class="pro-txt profile_name" contenteditable="true">&lt;Profile Name&gt;</span>
+					<span id="nik-name"></span>
+				</h1>
+				<p>
+					<span class="fir-count-txt">
+						<span id="friend_count" contenteditable="true">5</span> Friends
+					</span>
+				</p>
+				<div class="friends-img-div" id="friends-img-div"></div>
+			</div>
+			<div class="profile-button-site">
+				<div class="btn-site-pro">
+					<span>
+						<i class="fas fa-plus-circle"></i>
+						Add to Story
+					</span>
+					<span class="edit-profile-btn">
+						<i class="fas fa-pen"></i>
+						Edit Profile
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Fake Navbar, doesn't do anything -->	
+	<section class="full-navbar">
+		<nav class="navbar-site">			
+			<ul compact="txt-color-c">
+				<a href="#">
+					<li class=" txt-cc activ-navbar">Posts</li>
 				</a>
-				<button id="edit-profile-pic-btn">
-					<span class="fas fa-camera"></span>
-				</button>
+				<a href="#">
+					<li class=" txt-cc">About</li>
+				</a>
+				<a href="#">
+					<li class=" txt-cc">Friends</li>
+				</a>
+				<a href="#" id="photo-nav">
+					<li class=" txt-cc">Photo</li>
+				</a>
+				<a href="#" id="video-nav">
+					<li class=" txt-cc">Video</li>
+				</a>
+				<a href="#" id="likes-nav">
+					<li class=" txt-cc">Likes</li>
+				</a>
+				<a href="#">
+					<li class=" txt-cc">More <i class="fas fa-caret-down"></i></li>
+				</a>
+			</ul>
+			<div class="nav-btn">
+				<i class="fas fa-ellipsis-h"></i>
 			</div>
-		</div>
-		<div class="profile-name-info">
-			<h1>
-				<span class="pro-txt profile_name" contenteditable="true">&lt;Profile Name&gt;</span>
-				<span id="nik-name"></span>
-			</h1>
-			<p>
-				<span class="fir-count-txt">
-					<span id="friend_count" contenteditable="true">5</span> Friends
-				</span>
-			</p>
-			<div class="friends-img-div" id="friends-img-div">			
-			</div>
-		</div>
-		<div class="profile-button-site">
-			<div class="btn-site-pro">
-				<span>
-					<i class="fas fa-plus-circle"></i>
-					Add to Story
-				</span>
-				<span class="edit-profile-btn">
-					<i class="fas fa-pen"></i>
-					Edit Profile
-				</span>
-			</div>
-		</div>
-	</div>
-</section>
-		
-<section class="full-navbar">
-	<nav class="navbar-site">			
-		<ul compact="txt-color-c">
-			<a href="#">
-				<li class=" txt-cc activ-navbar">Posts</li>
-			</a>
-			<a href="#">
-				<li class=" txt-cc">About</li>
-			</a>
-			<a href="#">
-				<li class=" txt-cc">Friends</li>
-			</a>
-			<a href="#" id="photo-nav">
-				<li class=" txt-cc">Photo</li>
-			</a>
-			<a href="#" id="video-nav">
-				<li class=" txt-cc">Video</li>
-			</a>
-			<a href="#" id="likes-nav">
-				<li class=" txt-cc">Likes</li>
-			</a>
-			<a href="#">
-				<li class=" txt-cc">More <i class="fas fa-caret-down"></i></li>
-			</a>
-		</ul>
-		<div class="nav-btn">
-			<i class="fas fa-ellipsis-h"></i>
-		</div>
-	</nav>	
-</section>
-
-<section class="post-section">
-<div class="post-section-in">
-
-<section class="info-section">
-	
-	<div class="profile-lock-div">
-		<div class="icon-pld">
-			<i class="fab fa-keycdn"></i>
-		</div>
-		<div class="pld-text">
-			<h3>You locked your profile</h3>
-			<a href="#">Learn More</a>
-		</div>
-	</div>
-
-	<div class="about-info">
-		<!-- INTRO -->
-		<h4>Intro</h4>
-		<p id="bio-text">&lt;Profile Name&gt;</p>
-		<div class="bio-btn-click">
-			<input class="input-box" type="text" value="&lt;Profile Name&gt;"> 
-			<p class="length-count-txt"> 
-				<span id="length-count">101</span> characters remaining</p> 
-				<div class="putlic-c-o-btn">
-					<div>
-						<p><span class="fas fa-globe-europe"></span> Public</p>
+		</nav>	
+	</section>
+<!-- Rest of the page-->
+	<section class="post-section">
+		<div class="post-section-in">
+<!-- Information section -->			
+			<section class="info-section">
+				<div class="profile-lock-div">
+					<div class="icon-pld">
+						<i class="fab fa-keycdn"></i>
 					</div>
-					<div class="button-site-js">
-						<button id="cencel-btn">Cencel</button>
-						<button id="save-btn">Save</button>
+					<div class="pld-text">
+						<h3>You locked your profile</h3>
+						<a href="#">Learn More</a>
 					</div>
-				</div>					
-		</div>
-		<button id="bio-edit-btn" class="edit-bio btn">Edit Bio</button>
-		<ul>
-			<li><i class="fas fa-briefcase"></i> Works at 
-				<a href="#">Sad Mia</a>
-			</li>
-
-			<li><i class="fas fa-graduation-cap"></i> Went to 
-				<a href="#">kamarkhali high school</a>
-			</li>
-
-			<li><i class="fas fa-home"></i> Lives in 
-				<a href="#">Dhaka, Bangladesh</a>
-			</li>
-
-			<li><i class="fas fa-map-marker-alt"></i> From 
-				<a href="#">Faridpur, Dhaka, Bangladesh</a>
-			</li>
-			<li><i class="fas fa-heart"></i> Single</li>
-			<li><i class="fas fa-globe"></i> <a href="#">
-				sadmia.com</a>
-			</li>
-		</ul>
+				</div>
+<!-- About Section -->
+				<div class="about-info">
+				<!-- INTRO -->
+					<h4>Intro</h4>
+					<p id="profile_name">&lt;Profile Name&gt;</p>
+					<div class="bio-btn-click">
+						<input class="input-box" type="text" value="&lt;Profile Name&gt;"> 
+						<p class="length-count-txt">
+							<span id="length-count">101</span> characters remaining</p>
+							<div class="putlic-c-o-btn">
+								<div>
+									<p><span class="fas fa-globe-europe"></span> Public</p>
+								</div>
+								<div class="button-site-js">
+									<button id="cencel-btn">Cencel</button>
+									<button id="save-btn">Save</button>
+								</div>
+							</div>					
+					</div>
+					<button id="bio-edit-btn" class="edit-bio btn">Edit Bio</button>
+					<ul>
+						<li><i class="fas fa-briefcase"></i> Works at 
+							<a href="#" contenteditable="true">Sad Mia</a>
+						</li>
+						<li><i class="fas fa-graduation-cap"></i> Went to 
+							<a href="#" contenteditable="true">kamarkhali high school</a>
+						</li>
+						<li><i class="fas fa-home"></i> Lives in 
+							<a href="#" contenteditable="true">Dhaka, Bangladesh</a>
+						</li>
+						<li><i class="fas fa-map-marker-alt"></i> From 
+							<a href="#" contenteditable="true">Faridpur, Dhaka, Bangladesh</a>
+						</li>
+						<li><i class="fas fa-heart" contenteditable="true"></i> Single</li>
+						<li><i class="fas fa-globe"></i> <a href="#" contenteditable="true">
+							sadmia.com</a>
+						</li>
+					</ul>
 		<button class="edit-bio btn">Edit Details</button>
 		<div class="Hobbies-show">
 			<span><i class="fas fa-laptop-code"></i> Learning to Code</span>
@@ -362,6 +356,188 @@
 				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
 				<p>
 					<a href="%">5d</a>
+					<span><i class="fas fa-user-friends"></i></span>
+				</p>
+				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
+			</div>
+		</div>
+			<p class="post-text-show">
+				Sample Post
+			</p>
+		<div class="post-info-input">			
+			<div class="lilowow-cs">
+				<div class="llw-count">
+					<div class="icon-show top">
+						<img src="images/icon/wow.png">
+					</div>
+					<div class="icon-show mid like-icon-bg">
+						<i class="fas fa-thumbs-up"></i>
+					</div>
+					<div class="icon-show low love-icon-bg">
+						<i class="fas fa-heart"></i>
+					</div>
+					<div><p class="l-count"><span>35</span></p></div>
+				</div>
+				<div>
+					<p>
+						<a href="#">11 Comments</a>
+
+						<a href="#">6 Share</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="actavite">
+			<div class="lcs-btn lcs-btn_t">
+				<p>
+					<i id="post-icon-btn_t" class="far fa-thumbs-up"></i> 
+					<span id="post-icon-text_t">Like</span>
+				</p>
+			</div>
+			<div class="lcs-btn">
+				<p><i class="far fa-comment-alt"></i> Comment</p>
+			</div>
+			<div class="lcs-btn">
+				<p><i class="fas fa-share"></i> Share</p>
+			</div>
+		</div>
+		<!-- Comments -->
+		<div class="comment-site">
+			<div class="profil-ing-div">
+				<a href="#" id="profile-link">
+					<img class="post-profile-img" src="images/friends/00.jpg">
+				</a>
+			</div>
+			<div class="comment-input">
+				<input type="text" placeholder="Write a comment…">
+				<div class="comment-icon-div">
+					<div>
+						<i class="far fa-grin-alt"></i>
+					</div>
+					<div>
+						<i class="fas fa-camera"></i>
+					</div>
+					<div>
+						<img src="images/icon/gif.jpg">
+					</div>
+					<div>
+						<img src="images/icon/sticer.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="box-design post-div">
+		<div class="post-infarmation">
+			<div>
+				<div class="profil-ing-div post-profile-img">
+				<a href="#" id="profile-link">
+					<img class="post_profile_image" src="images/friends/00.jpg">
+				</a>
+			</div>
+			</div>
+			<div class="post-three-dot">
+				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
+				<p>
+					<a href="%">5d</a>
+					<span><i class="fas fa-user-friends"></i></span>
+				</p>
+
+				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
+			</div>
+		</div>
+
+			<div class="post-background">
+				<div>
+					<p>Sample Text</p>
+				</div>
+			</div>
+
+		<div class="post-info-input">
+			
+			<div class="lilowow-cs">
+				<div class="llw-count">
+					<div class="icon-show top">
+						<img src="images/icon/wow.png">
+					</div>
+					<div class="icon-show mid like-icon-bg">
+						<i class="fas fa-thumbs-up"></i>
+					</div>
+					<div class="icon-show low love-icon-bg">
+						<i class="fas fa-heart"></i>
+					</div>
+					<div><p class="l-count"><span>35</span></p></div>
+				</div>
+
+				<div>
+					<p>
+						<a href="#">11 Comments</a>
+
+						<a href="#">6 Share</a>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="actavite">
+			<div class="lcs-btn lcs-btn_bt">
+				<p>
+					<i id="post-icon-btn_bt" class="far fa-thumbs-up"></i> 
+					<span id="post-icon-text_bt">Like</span>
+				</p>
+			</div>
+			<div class="lcs-btn">
+				<p><i class="far fa-comment-alt"></i> Comment</p>
+			</div>
+			<div class="lcs-btn">
+				<p><i class="fas fa-share"></i> Share</p>
+			</div>
+		</div>
+
+
+		<div class="comment-site">
+			<div class="profil-ing-div">
+				<a href="#" id="profile-link">
+					<img class="post-profile-img">
+				</a>
+			</div>
+			<div class="comment-input">
+				<input type="text" placeholder="Write a comment…">
+				<div class="comment-icon-div">
+					<div>
+						<i class="far fa-grin-alt"></i>
+					</div>
+					<div>
+						<i class="fas fa-camera"></i>
+					</div>
+					<div>
+						<img src="images/icon/gif.jpg">
+					</div>
+					<div>
+						<img src="images/icon/sticer.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="box-design post-div">
+		<div class="post-infarmation">
+			<div>
+				<div class="profil-ing-div post-profile-img">
+				<a href="#" id="profile-link">
+					<img class="post_profile_image" src="images/friends/00.jpg">
+				</a>
+			</div>
+			</div>
+			<div class="post-three-dot">
+				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
+				<p>
+					<a href="%">5d</a>
 					<span>
 						<i id="public-btn-i" class="fas fa-user-friends"></i>
 
@@ -487,199 +663,6 @@
 		</div>
 
 	</div>
-
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" id="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span><i class="fas fa-user-friends"></i></span>
-				</p>
-
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
-		</div>
-
-			<p class="post-text-show">
-				Sample Post
-			</p>
-
-		<div class="post-info-input">
-			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
-					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
-					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>35</span></p></div>
-				</div>
-
-				<div>
-					<p>
-						<a href="#">11 Comments</a>
-
-						<a href="#">6 Share</a>
-					</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_t">
-				<p>
-					<i id="post-icon-btn_t" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_t">Like</span>
-				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-
-
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img" src="images/friends/00.jpg">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" id="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span><i class="fas fa-user-friends"></i></span>
-				</p>
-
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
-		</div>
-
-			<div class="post-background">
-				<div>
-					<p>আমাদের এই জাভাস্ক্রিপ্ট টিউটোরিয়ালটি আপনাকে জাভাস্ক্রিপ্টের মৌলিক ধারণা থেকে অ্যাডভান্স লেভেলের প্রোগ্রামার হতে সাহায্য করবে।</p>
-				</div>
-			</div>
-
-		<div class="post-info-input">
-			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
-					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
-					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>35</span></p></div>
-				</div>
-
-				<div>
-					<p>
-						<a href="#">11 Comments</a>
-
-						<a href="#">6 Share</a>
-					</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_bt">
-				<p>
-					<i id="post-icon-btn_bt" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_bt">Like</span>
-				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-
-
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
 	<div class="box-design post-div">
 		<div class="post-infarmation">
 			<div>
@@ -690,7 +673,7 @@
 			</div>
 			</div>
 			<div class="post-three-dot">
-				<h2><a href="#" id="profile_name">&lt;Profile Name&gt;</a></h2>
+				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
 				<p>
 					<a href="%">5d</a>
 					<span><i class="fas fa-user-friends"></i></span>
@@ -777,7 +760,7 @@
 	</div>
 </section>
 	</div>
-</section>
+	</section>
 
 
 	<script>
@@ -869,7 +852,7 @@
 		element.addEventListener('input', function() {
 			const profileNameText = this.innerText;			
 			// Update bio-text
-			document.getElementById('bio-text').innerText = profileNameText;			
+			document.getElementById('profile_name').innerText = profileNameText;			
 			// Update all other profile_name instances except the one being edited
 			document.querySelectorAll('.profile_name').forEach(function(el) {
 				if (el !== element) {
@@ -878,7 +861,7 @@
 			});
 		});
 	});
-
+	
 	// Call the function once on page load to ensure bio-text is initially synced
 	window.onload = function() {
 		populateFriends(); // Existing function to populate friends		
