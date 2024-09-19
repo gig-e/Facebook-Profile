@@ -1,9 +1,9 @@
 "use strict";
 
-let input_Profile_Name = "Sad Mia";
+let input_Profile_Name = "Sam Smithsen";
 let input_Profile_Image = "images/profile/profile.jpg";
 
-let input_profile_link = "https://facebook.com/sadmia.page"
+let input_profile_link = "http://www.facebook.com/sam.smithsen"
 
 let input_video_1 = "video/Facebook-Post.mp4";
 
