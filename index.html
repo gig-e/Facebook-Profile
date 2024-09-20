@@ -70,7 +70,7 @@
 				</h1>
 				<p>
 					<span class="fir-count-txt">
-						<span id="friend_count" contenteditable="true">5</span> Friends
+						<span id="friend_count" contenteditable="true">0</span> Friends
 					</span>
 				</p>
 				<div class="friends-img-div" id="friends-img-div"></div>
@@ -156,28 +156,33 @@
 					<button id="bio-edit-btn" class="edit-bio btn">Edit Bio</button>
 					<ul>
 						<li><i class="fas fa-briefcase"></i> Works at 
-							<a href="#" contenteditable="true">Sad Mia</a>
+							<a href="#" contenteditable="true">&lt;company&gt;</a>
 						</li>
-						<li><i class="fas fa-graduation-cap"></i> Went to 
-							<a href="#" contenteditable="true">kamarkhali high school</a>
+						<li><i class="fas fa-graduation-cap"></i>Went to
+							<a href="#" contenteditable="true">&lt;school&gt;</a>
 						</li>
-						<li><i class="fas fa-home"></i> Lives in 
-							<a href="#" contenteditable="true">Dhaka, Bangladesh</a>
+						<li><i class="fas fa-home"></i>Lives in 
+							<a href="#" contenteditable="true">&lt;home&gt;</a>
 						</li>
 						<li><i class="fas fa-map-marker-alt"></i> From 
-							<a href="#" contenteditable="true">Faridpur, Dhaka, Bangladesh</a>
+							<a href="#" contenteditable="true">&lt;where from&gt;</a>
 						</li>
-						<li><i class="fas fa-heart" contenteditable="true"></i> Single</li>
-						<li><i class="fas fa-globe"></i> <a href="#" contenteditable="true">
-							sadmia.com</a>
+						<li contenteditable="true"><i class="fas fa-heart"></i>&lt;married status&gt;</li>
+						<li><i class="fas fa-globe"></i> 
+							<a href="#" contenteditable="true">website</a>
 						</li>
 					</ul>
 		<button class="edit-bio btn">Edit Details</button>
+<!-- Hobbies -->
 		<div class="Hobbies-show">
-			<span><i class="fas fa-laptop-code"></i> Learning to Code</span>
-			<span><i class="fas fa-laptop-code"></i>Code</span>
-			<span><i class="fas fa-book"></i>Learning</span>
-			<span><i class="fas fa-camera-retro"></i>Photography</span>
+			<!-- <span contenteditable="true"><i class="fas fa-laptop-code"></i>Hobby #1</span>
+			<span contenteditable="true"><i class="fas fa-laptop-code"></i>Hobby #2</span>
+			<span contenteditable="true"><i class="fas fa-book"></i>Hobby #3</span>
+			<span contenteditable="true"><i class="fas fa-camera-retro"></i>Hobby #4</span> -->
+			<span contenteditable="true">Hobby #1</span>
+			<span contenteditable="true">Hobby #2</span>
+			<span contenteditable="true">Hobby #3</span>
+			<span contenteditable="true">Hobby #4</span>
 		</div>
 		<button class="edit-bio btn">Edit Hobbies</button>
 		<div class="Featured-site">			
@@ -299,7 +304,7 @@
 		<div class="post-upload-T">
 			<div class="profil-ing-div">
 				<a href="#" id="profile-link">
-					<img id="Profile_images" src="images/friends/00.jpg">
+					<img class="post_profile_image" src="images/friends/00.jpg">
 				</a>
 			</div>
 			<div class="text-post">
@@ -428,7 +433,7 @@
 		</div>
 
 	</div>
-
+<!-- Post #1 -->
 	<div class="box-design post-div">
 		<div class="post-infarmation">
 			<div>
@@ -524,7 +529,7 @@
 		</div>
 
 	</div>
-
+<!-- Post #2 -->	
 	<div class="box-design post-div">
 		<div class="post-infarmation">
 			<div>
@@ -663,6 +668,7 @@
 		</div>
 
 	</div>
+<!-- Post #3 -->
 	<div class="box-design post-div">
 		<div class="post-infarmation">
 			<div>
@@ -833,25 +839,20 @@
 	// Optional: Update the friends list whenever the friend_count value changes (e.g., after editing)
 	document.getElementById('friend_count').addEventListener('blur', populateFriends);
 
-	// Add event listeners to both #profile_name and #friend_count
-	document.getElementById('profile_name').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent default behavior (new line creation)
-        }
-    });
-
-	// Add event listener to update the post_profile_image when the profile image changes
-    document.getElementById('friend_count').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent default behavior (new line creation)
-        }
-    });
+	// Prevent Enter key behavior in contenteditable fields for profile_name and friend_count
+	document.querySelectorAll('[contenteditable="true"]').forEach(function(element) {
+		element.addEventListener('keydown', function(event) {
+			if (event.key === 'Enter') {
+				event.preventDefault(); // Prevent default behavior (new line creation)
+			}
+		});
+	});
 
 	// Add event listener to all profile_name elements for input
 	document.querySelectorAll('.profile_name').forEach(function(element) {
 		element.addEventListener('input', function() {
 			const profileNameText = this.innerText;			
-			// Update bio-text
+			// Update profile_name
 			document.getElementById('profile_name').innerText = profileNameText;			
 			// Update all other profile_name instances except the one being edited
 			document.querySelectorAll('.profile_name').forEach(function(el) {
@@ -862,13 +863,12 @@
 		});
 	});
 	
-	// Call the function once on page load to ensure bio-text is initially synced
+	// Call the function once on page load to ensure profile_name is initially synced
 	window.onload = function() {
 		populateFriends(); // Existing function to populate friends		
 	};
 
 	</script>
-	<!-- <script type="text/javascript" src="js/castom.js"></script> -->
 	<!-- <script type="text/javascript" src="js/facebook.js"></script> -->
 	</body>
 </html>
