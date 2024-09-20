@@ -201,23 +201,31 @@
 			</div>
 		</div>
 		<button class="edit-bio btn">Edit Featured</button> -->
-	</div>
-	<div class="box-design images-site">
+	</div>	
 <!-- Photos -->
+	<div class="box-design images-site">
 		<span>Photos</span>
 		<div class="see-all-images"><a href="#">See All Photos</a></div>
 		<div class="at9-images">
 			<div class="images-div">
-				<img id="post-image-12" src="images/friends/0.jpg">
+				<img id="post-image-1" src="images/friends/0.jpg" onclick="document.getElementById('post-image-1-input').click()">
+				<!-- Hidden file input for changing the image -->
+				<input type="file" id="post-image-1-input" accept="image/*" onchange="changePhoto('post-image-1-input', 'post-image-1')" hidden="true">
 			</div>
+
 			<div class="images-div">
-				<img id="post-image-2" src="images/friends/0.jpg">
+				<img id="post-image-2" src="images/friends/0.jpg" onclick="document.getElementById('post-image-2-input').click()">
+				<input type="file" id="post-image-2-input" accept="image/*" onchange="changePhoto('post-image-2-input', 'post-image-2')" hidden="true">
 			</div>
+
 			<div class="images-div">
-				<img id="post-image-3" src="images/friends/0.jpg">
+				<img id="post-image-3" src="images/friends/0.jpg" onclick="document.getElementById('post-image-3-input').click()">
+				<input type="file" id="post-image-3-input" accept="image/*" onchange="changePhoto('post-image-3-input', 'post-image-3')" hidden="true">
 			</div>
 		</div>
 	</div>
+
+		
 	<div class="box-design friends-site">						
 		<span><b>Friends</b><br> 
 			<p>
@@ -265,473 +273,474 @@
 		</div>
 	</div>
 </section>
-
-<section class="post-info">
-	<div class="box-design">
-		<div class="post-upload-T">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			<div class="text-post">
-				<span>What's on your mind?</span>
-			</div>
-		</div>
-		<div class="photo-upload">
-			<div class="post-upl">
-				<p><i class="fas fa-video"></i> Live Video</p>
-			</div>
-			<div class="post-upl">
-				<p><i class="fas fa-images"></i> Photo/Video</p>
-			</div>
-			<div class="post-upl">
-				<p><i class="fas fa-flag"></i> Life Event</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="box-design post-filter">
-
-		<div class="filter-site">
-			<span>Posts</span>
-			<div class="fil-ter">
-				<button><i class="fas fa-sliders-h"></i> Filters</button>
-
-				<button><i class="fas fa-cog"></i> Manager Posts</button>
-			</div>
-		</div>
-
-		<div class="list-type">
-			<div class="fil-list activ-navbar">
-				<i class="fas fa-bars"></i> List View
-			</div>
-			<div class="fil-list">
-				<i class="fas fa-th-large"></i> Grid View
-			</div>
-		</div>
-		
-	</div>
-
-
-<!-- ************ Posts ************ -->
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span><i class="fas fa-user-friends"></i></span>
-				</p>
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
-		</div>
-			<p class="post-text-show" contenteditable="true">
-				Sample Post
-			</p>
-		<div class="post-info-input">			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
-					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
-					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>35</span></p></div>
+	<!-- What's on your mend? section -->
+	<section class="post-info">
+		<div class="box-design">
+			<div class="post-upload-T">
+				<div class="profil-ing-div">
+					<a href="#" id="profile-link">
+						<img class="post_profile_image" src="images/friends/00.jpg">
+					</a>
 				</div>
-				<div>
-					<p>
-						<a href="#">11 Comments</a>
-
-						<a href="#">6 Share</a>
-					</p>
+				<div class="text-post">
+					<span>What's on your mind?</span>
 				</div>
 			</div>
-		</div>
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_t">
-				<p>
-					<i id="post-icon-btn_t" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_t">Like</span>
-				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-		<!-- Comments -->
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img" src="images/friends/00.jpg">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
-					</div>
+			<div class="photo-upload">
+				<div class="post-upl">
+					<p><i class="fas fa-video"></i> Live Video</p>
+				</div>
+				<div class="post-upl">
+					<p><i class="fas fa-images"></i> Photo/Video</p>
+				</div>
+				<div class="post-upl">
+					<p><i class="fas fa-flag"></i> Life Event</p>
 				</div>
 			</div>
 		</div>
 
-	</div>
-<!-- Post #1 -->
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span><i class="fas fa-user-friends"></i></span>
-				</p>
+		<div class="box-design post-filter">
 
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
-		</div>
+			<div class="filter-site">
+				<span>Posts</span>
+				<div class="fil-ter">
+					<button><i class="fas fa-sliders-h"></i> Filters</button>
 
-			<div class="post-background">
-				<div>
-					<p contenteditable="true">Sample Text</p>
+					<button><i class="fas fa-cog"></i> Manager Posts</button>
 				</div>
 			</div>
 
-		<div class="post-info-input">
+			<div class="list-type">
+				<div class="fil-list activ-navbar">
+					<i class="fas fa-bars"></i> List View
+				</div>
+				<div class="fil-list">
+					<i class="fas fa-th-large"></i> Grid View
+				</div>
+			</div>
 			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
-					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
-					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>35</span></p></div>
-				</div>
+		</div>
 
+
+	<!-- ************ Posts ************ -->
+	<!-- Post #1 - Text -->
+		<div class="box-design post-div">
+			<div class="post-infarmation">
 				<div>
+					<div class="profil-ing-div post-profile-img">
+					<a href="#" id="profile-link">
+						<img class="post_profile_image" src="images/friends/00.jpg">
+					</a>
+				</div>
+				</div>
+				<div class="post-three-dot">
+					<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
 					<p>
-						<a href="#">11 Comments</a>
-
-						<a href="#">6 Share</a>
+						<a href="%">5d</a>
+						<span><i class="fas fa-user-friends"></i></span>
 					</p>
+					<span class="thre-dto-btn fas fa-ellipsis-h"></span>
 				</div>
 			</div>
-
-		</div>
-
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_bt">
-				<p>
-					<i id="post-icon-btn_bt" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_bt">Like</span>
+				<p class="post-text-show" contenteditable="true">
+					Sample Post
 				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-
-
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-<!-- Post #2 -->	
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span>
-						<i id="public-btn-i" class="fas fa-user-friends"></i>
-
-						<div class="Select-audience">
-							<div class="header-popap">
-								<p class="h-pop">Select audience</p>
-								<span id="popup-close-btn" class="fas fa-times"></span>
-							</div>
-
-							<div class="content-popaap">
-								<ul>
-									<li id="public-btn">
-										<div class="icon-div">
-											<i class="fas fa-globe-europe"></i>
-										</div>
-										<div class="text-aria">
-											<h2>Public</h2>
-											<p>Anyone on or off Facebook</p>
-											<i id="public-li-icon" class="far fa-circle"></i>
-										</div>
-									</li>
-
-									<li class="activ-li-div" id="friends-btn">
-										<div class="icon-div">
-											<i class="fas fa-user-friends frind-icon"></i>
-										</div>
-										<div class="text-aria">
-											<h2>Friends</h2>
-											<p>Your friends on Facebook</p>
-											<i id="friends-li-icon" class="far fa-dot-circle activ-li-icon"></i>
-										</div>
-									</li>
-
-									<li id="lock-btn">
-										<div class="icon-div">
-											<i class="fas fa-lock"></i>
-										</div>
-										<div class="text-aria">
-											<h2 class="onlu-me">Only Me</h2>
-											<i id="lock-li-icon" class="far fa-circle"></i>
-										</div>
-									</li>
-								</ul>
-							</div>
+			<div class="post-info-input">			
+				<div class="lilowow-cs">
+					<div class="llw-count">
+						<div class="icon-show top">
+							<img src="images/icon/wow.png">
 						</div>
-
-					</span>
-				</p>
-
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
-		</div>
-
-			<p class="post-hader-text" id="post_h_T">Hello World.</p>
-			<img id="post-image-12" class="post-images" src="images/friends/0.jpg">
-
-		<div class="post-info-input">
-			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
+						<div class="icon-show mid like-icon-bg">
+							<i class="fas fa-thumbs-up"></i>
+						</div>
+						<div class="icon-show low love-icon-bg">
+							<i class="fas fa-heart"></i>
+						</div>
+						<div><p class="l-count"><span>35</span></p></div>
 					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
+					<div>
+						<p>
+							<a href="#">11 Comments</a>
+
+							<a href="#">6 Share</a>
+						</p>
 					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>11</span></p></div>
 				</div>
-
-				<div>
+			</div>
+			<div class="actavite">
+				<div class="lcs-btn lcs-btn_t">
 					<p>
-						<a href="#">1 Comments</a>
-
-						<a href="#">1 Share</a>
+						<i id="post-icon-btn_t" class="far fa-thumbs-up"></i> 
+						<span id="post-icon-text_t">Like</span>
 					</p>
 				</div>
+				<div class="lcs-btn">
+					<p><i class="far fa-comment-alt"></i> Comment</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="fas fa-share"></i> Share</p>
+				</div>
 			</div>
-
-		</div>
-
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_i">
-				<p>
-					<i id="post-icon-btn_i" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_i">Like</span>
-				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-
-
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img" src="images/friends/00.jpg">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
+			<!-- Comments -->
+			<div class="comment-site">
+				<div class="profil-ing-div">
+					<a href="#" id="profile-link">
+						<img class="post-profile-img" src="images/friends/00.jpg">
+					</a>
+				</div>
+				<div class="comment-input">
+					<input type="text" placeholder="Write a comment…">
+					<div class="comment-icon-div">
+						<div>
+							<i class="far fa-grin-alt"></i>
+						</div>
+						<div>
+							<i class="fas fa-camera"></i>
+						</div>
+						<div>
+							<img src="images/icon/gif.jpg">
+						</div>
+						<div>
+							<img src="images/icon/sticer.jpg">
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-	</div>
-<!-- Post #3 -->
-	<div class="box-design post-div">
-		<div class="post-infarmation">
-			<div>
-				<div class="profil-ing-div post-profile-img">
-				<a href="#" id="profile-link">					
-					<img class="post_profile_image" src="images/friends/00.jpg">
-				</a>
-			</div>
-			</div>
-			<div class="post-three-dot">
-				<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
-				<p>
-					<a href="%">5d</a>
-					<span><i class="fas fa-user-friends"></i></span>
-				</p>
-
-				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
-			</div>
 		</div>
-			<p class="post-hader-text" id="post_h_2I">Hello World.</p>
-			<div class="post-background-img">
+	<!-- Post #2 - Text on background -->
+		<div class="box-design post-div">
+			<div class="post-infarmation">
 				<div>
-					<img id="post-image-1" src="images/friends/0.jpg">
+					<div class="profil-ing-div post-profile-img">
+					<a href="#" id="profile-link">
+						<img class="post_profile_image" src="images/friends/00.jpg">
+					</a>
 				</div>
-				<div>
-					<img id="post-image-2" src="images/friends/0.jpg">
 				</div>
-			</div>
-
-		<div class="post-info-input">
-			
-			<div class="lilowow-cs">
-				<div class="llw-count">
-					<div class="icon-show top">
-						<img src="images/icon/wow.png">
-					</div>
-					<div class="icon-show mid like-icon-bg">
-						<i class="fas fa-thumbs-up"></i>
-					</div>
-					<div class="icon-show low love-icon-bg">
-						<i class="fas fa-heart"></i>
-					</div>
-					<div><p class="l-count"><span>35</span></p></div>
-				</div>
-
-				<div>
+				<div class="post-three-dot">
+					<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
 					<p>
-						<a href="#">11 Comments</a>
+						<a href="%">5d</a>
+						<span><i class="fas fa-user-friends"></i></span>
+					</p>
 
-						<a href="#">6 Share</a>
+					<span class="thre-dto-btn fas fa-ellipsis-h"></span>
+				</div>
+			</div>
+
+				<div class="post-background">
+					<div>
+						<p contenteditable="true">Sample Text</p>
+					</div>
+				</div>
+
+			<div class="post-info-input">
+				
+				<div class="lilowow-cs">
+					<div class="llw-count">
+						<div class="icon-show top">
+							<img src="images/icon/wow.png">
+						</div>
+						<div class="icon-show mid like-icon-bg">
+							<i class="fas fa-thumbs-up"></i>
+						</div>
+						<div class="icon-show low love-icon-bg">
+							<i class="fas fa-heart"></i>
+						</div>
+						<div><p class="l-count"><span>35</span></p></div>
+					</div>
+
+					<div>
+						<p>
+							<a href="#">11 Comments</a>
+
+							<a href="#">6 Share</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="actavite">
+				<div class="lcs-btn lcs-btn_bt">
+					<p>
+						<i id="post-icon-btn_bt" class="far fa-thumbs-up"></i> 
+						<span id="post-icon-text_bt">Like</span>
 					</p>
 				</div>
+				<div class="lcs-btn">
+					<p><i class="far fa-comment-alt"></i> Comment</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="fas fa-share"></i> Share</p>
+				</div>
 			</div>
 
-		</div>
 
-		<div class="actavite">
-			<div class="lcs-btn lcs-btn_2i">
-				<p>
-					<i id="post-icon-btn_2i" class="far fa-thumbs-up"></i> 
-					<span id="post-icon-text_2i">Like</span>
-				</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="far fa-comment-alt"></i> Comment</p>
-			</div>
-			<div class="lcs-btn">
-				<p><i class="fas fa-share"></i> Share</p>
-			</div>
-		</div>
-		<div class="comment-site">
-			<div class="profil-ing-div">
-				<a href="#" id="profile-link">
-					<img class="post-profile-img" src="images/friends/00.jpg">
-				</a>
-			</div>
-			<div class="comment-input">
-				<input type="text" placeholder="Write a comment…">
-				<div class="comment-icon-div">
-					<div>
-						<i class="far fa-grin-alt"></i>
-					</div>
-					<div>
-						<i class="fas fa-camera"></i>
-					</div>
-					<div>
-						<img src="images/icon/gif.jpg">
-					</div>
-					<div>
-						<img src="images/icon/sticer.jpg">
+			<div class="comment-site">
+				<div class="profil-ing-div">
+					<a href="#" id="profile-link">
+						<img class="post-profile-img">
+					</a>
+				</div>
+				<div class="comment-input">
+					<input type="text" placeholder="Write a comment…">
+					<div class="comment-icon-div">
+						<div>
+							<i class="far fa-grin-alt"></i>
+						</div>
+						<div>
+							<i class="fas fa-camera"></i>
+						</div>
+						<div>
+							<img src="images/icon/gif.jpg">
+						</div>
+						<div>
+							<img src="images/icon/sticer.jpg">
+						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
-	</div>
-</section>
+	<!-- Post #3 - Singel Picture -->	
+		<!-- <div class="box-design post-div">
+			<div class="post-infarmation">
+				<div>
+					<div class="profil-ing-div post-profile-img">
+					<a href="#" id="profile-link">
+						<img class="post_profile_image" src="images/friends/00.jpg">
+					</a>
+				</div>
+				</div>
+				<div class="post-three-dot">
+					<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
+					<p>
+						<a href="%">5d</a>
+						<span>
+							<i id="public-btn-i" class="fas fa-user-friends"></i>
+
+							<div class="Select-audience">
+								<div class="header-popap">
+									<p class="h-pop">Select audience</p>
+									<span id="popup-close-btn" class="fas fa-times"></span>
+								</div>
+
+								<div class="content-popaap">
+									<ul>
+										<li id="public-btn">
+											<div class="icon-div">
+												<i class="fas fa-globe-europe"></i>
+											</div>
+											<div class="text-aria">
+												<h2>Public</h2>
+												<p>Anyone on or off Facebook</p>
+												<i id="public-li-icon" class="far fa-circle"></i>
+											</div>
+										</li>
+
+										<li class="activ-li-div" id="friends-btn">
+											<div class="icon-div">
+												<i class="fas fa-user-friends frind-icon"></i>
+											</div>
+											<div class="text-aria">
+												<h2>Friends</h2>
+												<p>Your friends on Facebook</p>
+												<i id="friends-li-icon" class="far fa-dot-circle activ-li-icon"></i>
+											</div>
+										</li>
+
+										<li id="lock-btn">
+											<div class="icon-div">
+												<i class="fas fa-lock"></i>
+											</div>
+											<div class="text-aria">
+												<h2 class="onlu-me">Only Me</h2>
+												<i id="lock-li-icon" class="far fa-circle"></i>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</span>
+					</p>
+
+					<span class="thre-dto-btn fas fa-ellipsis-h"></span>
+				</div>
+			</div>
+
+				<p class="post-hader-text" id="post_h_T">Hello World.</p>
+				<img id="post-image-12" class="post-images" src="images/friends/0.jpg">
+
+			<div class="post-info-input">
+				
+				<div class="lilowow-cs">
+					<div class="llw-count">
+						<div class="icon-show top">
+							<img src="images/icon/wow.png">
+						</div>
+						<div class="icon-show mid like-icon-bg">
+							<i class="fas fa-thumbs-up"></i>
+						</div>
+						<div class="icon-show low love-icon-bg">
+							<i class="fas fa-heart"></i>
+						</div>
+						<div><p class="l-count"><span>11</span></p></div>
+					</div>
+
+					<div>
+						<p>
+							<a href="#">1 Comments</a>
+
+							<a href="#">1 Share</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="actavite">
+				<div class="lcs-btn lcs-btn_i">
+					<p>
+						<i id="post-icon-btn_i" class="far fa-thumbs-up"></i> 
+						<span id="post-icon-text_i">Like</span>
+					</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="far fa-comment-alt"></i> Comment</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="fas fa-share"></i> Share</p>
+				</div>
+			</div>
+
+
+			<div class="comment-site">
+				<div class="profil-ing-div">
+					<a href="#" id="profile-link">
+						<img class="post-profile-img" src="images/friends/00.jpg">
+					</a>
+				</div>
+				<div class="comment-input">
+					<input type="text" placeholder="Write a comment…">
+					<div class="comment-icon-div">
+						<div>
+							<i class="far fa-grin-alt"></i>
+						</div>
+						<div>
+							<i class="fas fa-camera"></i>
+						</div>
+						<div>
+							<img src="images/icon/gif.jpg">
+						</div>
+						<div>
+							<img src="images/icon/sticer.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div> -->
+	<!-- Post #4 - Multiple Pictures-->
+		<!-- <div class="box-design post-div">
+			<div class="post-infarmation">
+				<div>
+					<div class="profil-ing-div post-profile-img">
+					<a href="#" id="profile-link">					
+						<img class="post_profile_image" src="images/friends/00.jpg">
+					</a>
+				</div>
+				</div>
+				<div class="post-three-dot">
+					<h2><a href="#" class="profile_name">&lt;Profile Name&gt;</a></h2>
+					<p>
+						<a href="%">5d</a>
+						<span><i class="fas fa-user-friends"></i></span>
+					</p>
+
+					<span class="thre-dto-btn fas fa-ellipsis-h"></span>
+				</div>
+			</div>
+				<p class="post-hader-text" id="post_h_2I">Hello World.</p>
+				<div class="post-background-img">
+					<div>
+						<img id="post-image-1" src="images/friends/0.jpg">
+					</div>
+					<div>
+						<img id="post-image-2" src="images/friends/0.jpg">
+					</div>
+				</div>
+
+			<div class="post-info-input">
+				
+				<div class="lilowow-cs">
+					<div class="llw-count">
+						<div class="icon-show top">
+							<img src="images/icon/wow.png">
+						</div>
+						<div class="icon-show mid like-icon-bg">
+							<i class="fas fa-thumbs-up"></i>
+						</div>
+						<div class="icon-show low love-icon-bg">
+							<i class="fas fa-heart"></i>
+						</div>
+						<div><p class="l-count"><span>35</span></p></div>
+					</div>
+
+					<div>
+						<p>
+							<a href="#">11 Comments</a>
+
+							<a href="#">6 Share</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="actavite">
+				<div class="lcs-btn lcs-btn_2i">
+					<p>
+						<i id="post-icon-btn_2i" class="far fa-thumbs-up"></i> 
+						<span id="post-icon-text_2i">Like</span>
+					</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="far fa-comment-alt"></i> Comment</p>
+				</div>
+				<div class="lcs-btn">
+					<p><i class="fas fa-share"></i> Share</p>
+				</div>
+			</div>
+			<div class="comment-site">
+				<div class="profil-ing-div">
+					<a href="#" id="profile-link">
+						<img class="post-profile-img" src="images/friends/00.jpg">
+					</a>
+				</div>
+				<div class="comment-input">
+					<input type="text" placeholder="Write a comment…">
+					<div class="comment-icon-div">
+						<div>
+							<i class="far fa-grin-alt"></i>
+						</div>
+						<div>
+							<i class="fas fa-camera"></i>
+						</div>
+						<div>
+							<img src="images/icon/gif.jpg">
+						</div>
+						<div>
+							<img src="images/icon/sticer.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</section>
 	</div>
 	</section>
 
@@ -823,6 +832,20 @@
 				element.innerText = newFriendCount; // Sync both friend counts
 			}
 		});
+	}
+
+	// Change photos
+	function changePhoto(inputElementId, imgElementId) {
+		const input = document.getElementById(inputElementId);
+		const img = document.getElementById(imgElementId);
+
+		if (input.files && input.files[0]) {
+			const reader = new FileReader();
+			reader.onload = function(e) {
+				img.src = e.target.result;  // Update the image source with the new image
+			}
+			reader.readAsDataURL(input.files[0]);  // Read the file as a data URL
+		}
 	}
 
 	// Attach the event listener to both friend_count elements
