@@ -225,52 +225,17 @@
 		</div>
 	</div>
 
-		
+<!-- Friends -->		
 	<div class="box-design friends-site">						
-		<span><b>Friends</b><br> 
-			<p>
-				<span id="friend_count"></span> Friends
-			</p>
-		</span>
-		<div class="see-all-images"><a href="#">See All Friends</a></div>
-		<div class="at9-images">
-			<div class="images-div">
-				<img id="frind-image-1" src="images/friends/0.jpg">
-				<p><a href="#">Mehei Hasan</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-2" src="images/friends/0.jpg">
-				<p><a href="#">salma akter</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-3" src="images/friends/0.jpg">
-				<p><a href="#">abu bakker</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-4" src="images/friends/0.jpg">
-				<p><a href="#">bangladesh</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-5" src="images/friends/0.jpg">
-				<p><a href="#">japan</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-6" src="images/friends/0.jpg">
-				<p><a href="#">hello Bangladesh</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-7" src="images/friends/0.jpg">
-				<p><a href="#">sad mia</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-8" src="images/friends/0.jpg">
-				<p><a href="#">china</a></p>
-			</div>
-			<div class="images-div">
-				<img id="frind-image-9" src="images/friends/0.jpg">
-				<p><a href="#">sad mia</a></p>
-			</div>
-		</div>
+		<div class="box-design friends-site">
+			<span><b>Friends</b><br>
+				<p>
+					<span id="friend_count" contenteditable="true">0</span> Friends
+				</p>
+			</span>
+			<div class="see-all-images"><a href="#">See All Friends</a></div>
+			<div class="at9-images" id="friends-img-container"></div>
+		</div>		
 	</div>
 </section>
 	<!-- What's on your mend? section -->
@@ -847,6 +812,59 @@
 			reader.readAsDataURL(input.files[0]);  // Read the file as a data URL
 		}
 	}
+
+	// Function to dynamically populate friends based on the friend_count
+	function populateFriends() {
+		const friendCount = parseInt(document.getElementById('friend_count').innerText) || 0;
+		const friendsContainer = document.getElementById('friends-img-container');
+
+		// Clear the existing friends images
+		friendsContainer.innerHTML = '';
+
+		// Dynamically add friend images based on the count
+		for (let i = 1; i <= friendCount; i++) {
+			const friendImgDiv = document.createElement('div');
+			friendImgDiv.className = 'images-div';
+
+			const img = document.createElement('img');
+			img.id = `friend-image-${i}`;
+			img.src = `images/friends/0.jpg`; // Use placeholder image
+			img.alt = `Friend ${i}`;
+			img.onclick = function() {
+				document.getElementById(`friend-image-${i}-input`).click();
+			};
+
+			// Hidden file input to change the image
+			const fileInput = document.createElement('input');
+			fileInput.type = 'file';
+			fileInput.id = `friend-image-${i}-input`;
+			fileInput.accept = 'image/*';
+			fileInput.onchange = function() {
+				changePhoto(fileInput.id, img.id);
+			};
+			fileInput.hidden = true;
+
+			const friendName = document.createElement('p');
+			const friendLink = document.createElement('a');
+			friendLink.href = '#';
+			friendLink.innerText = `Friend ${i}`;
+			friendName.appendChild(friendLink);
+
+			// Append the image, file input, and friend name to the div
+			friendImgDiv.appendChild(img);
+			friendImgDiv.appendChild(fileInput);
+			friendImgDiv.appendChild(friendName);
+
+			// Append the friend image div to the main container
+			friendsContainer.appendChild(friendImgDiv);
+		}
+	}
+
+	// Update the friends whenever the friend_count is changed
+	document.getElementById('friend_count').addEventListener('blur', populateFriends);
+
+	// Initialize the friends on page load
+	window.onload = populateFriends;
 
 	// Attach the event listener to both friend_count elements
 	document.querySelectorAll('#friend_count').forEach(function(element) {
