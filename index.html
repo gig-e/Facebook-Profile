@@ -185,7 +185,8 @@
 			<span contenteditable="true">Hobby #4</span>
 		</div>
 		<button class="edit-bio btn">Edit Hobbies</button>
-		<div class="Featured-site">			
+<!-- Featured -->
+		<!-- <div class="Featured-site">			
 			<div class="Featured-img-div">
 				<img id="post-image-12" src="images/friends/0.jpg">
 			</div>
@@ -199,64 +200,30 @@
 				<img id="post-image-8" src="images/friends/0.jpg">
 			</div>
 		</div>
-		<button class="edit-bio btn">Edit Featured</button>
+		<button class="edit-bio btn">Edit Featured</button> -->
 	</div>
 	<div class="box-design images-site">
-									
-			<span>Photos</span>
-
-			<div class="see-all-images"><a href="#">See All Photos</a></div>
-
+<!-- Photos -->
+		<span>Photos</span>
+		<div class="see-all-images"><a href="#">See All Photos</a></div>
 		<div class="at9-images">
-			
 			<div class="images-div">
 				<img id="post-image-12" src="images/friends/0.jpg">
 			</div>
-
 			<div class="images-div">
 				<img id="post-image-2" src="images/friends/0.jpg">
 			</div>
-
 			<div class="images-div">
 				<img id="post-image-3" src="images/friends/0.jpg">
 			</div>
-
-			<div class="images-div">
-				<img id="post-image-4" src="images/friends/0.jpg">
-			</div>
-
-			<div class="images-div">
-				<img id="post-image-5" src="images/friends/0.jpg">
-			</div>
-
-			<div class="images-div">
-				<img id="post-image-6" src="images/friends/0.jpg">
-			</div>
-
-			<div class="images-div">
-				<img id="post-image-7" src="images/friends/0.jpg">
-			</div>
-
-			<div class="images-div">
-				<img id="post-image-8" src="images/friends/0.jpg">
-			</div>
-
-			<div class="images-div">
-				<img id="post-image-9" src="images/friends/0.jpg">
-			</div>
-
 		</div>
-
 	</div>
-	<div class="box-design friends-site">									
-			<span><b>Friends</b><br> 
-				<p>
-					<span>
-						3641
-					</span> 
-					Friends
-				</p>
-			</span>
+	<div class="box-design friends-site">						
+		<span><b>Friends</b><br> 
+			<p>
+				<span id="friend_count"></span> Friends
+			</p>
+		</span>
 		<div class="see-all-images"><a href="#">See All Friends</a></div>
 		<div class="at9-images">
 			<div class="images-div">
@@ -366,7 +333,7 @@
 				<span class="thre-dto-btn fas fa-ellipsis-h"></span>
 			</div>
 		</div>
-			<p class="post-text-show">
+			<p class="post-text-show" contenteditable="true">
 				Sample Post
 			</p>
 		<div class="post-info-input">			
@@ -456,7 +423,7 @@
 
 			<div class="post-background">
 				<div>
-					<p>Sample Text</p>
+					<p contenteditable="true">Sample Text</p>
 				</div>
 			</div>
 
@@ -846,6 +813,21 @@
 				event.preventDefault(); // Prevent default behavior (new line creation)
 			}
 		});
+	});
+
+	// Function to update both friend_count instances
+	function updateFriendCount(event) {
+		const newFriendCount = event.target.innerText;
+		document.querySelectorAll('#friend_count').forEach(function(element) {
+			if (element !== event.target) {
+				element.innerText = newFriendCount; // Sync both friend counts
+			}
+		});
+	}
+
+	// Attach the event listener to both friend_count elements
+	document.querySelectorAll('#friend_count').forEach(function(element) {
+		element.addEventListener('input', updateFriendCount);
 	});
 
 	// Add event listener to all profile_name elements for input
